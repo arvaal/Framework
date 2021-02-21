@@ -3,21 +3,21 @@
 return [
     '' => [
         'controller' => 'main',
-        'actin' => 'index'
+        'action' => 'index'
     ],
-    
-    'accaunt/login' => [
-        'controller' => 'accaunt',
-        'actin' => 'login'
+
+    'account/login' => [
+        'controller' => 'account',
+        'action' => 'login'
     ],
-    
-    'accaunt/register' => [
-        'controller' => 'accaunt',
-        'actin' => 'register'
+
+    'account/register' => [
+        'controller' => 'account',
+        'action' => 'register'
     ],
-    
+
     'news/show' => [
         'controller' => 'news',
-        'actin' => 'show'
+        'action' => 'show'
     ]
 ];
