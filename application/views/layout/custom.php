@@ -2,7 +2,8 @@
     <head>
         <title><?php echo $title; ?></title>
     </head>
-    <body>
+    <body style="background-color: whitesmoke;">
        <?php echo $content; ?>
     </body>
 </html>
+
