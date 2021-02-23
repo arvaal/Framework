@@ -11,6 +11,7 @@ class AccountController extends Controller {
 //    }
 
     public function loginAction() {
+        //$this->view->redirect('/Framework/');
         $this->view->render('Страница логина');
     }
 

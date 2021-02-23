@@ -2,6 +2,8 @@
 
 namespace application\core;
 
+use application\core\View;
+
 class Router {
 
     protected $routes = [];
@@ -46,13 +48,13 @@ class Router {
                     $controller = new $path($this->params);
                     $controller->$action();
                 } else {
-                    echo 'Не найден экшин: ' . $action;
+                    View::errorCode(404);
                 }
             } else {
-                echo 'Не найден класс: ' . $path;
+                View::errorCode(404);
             }
         } else {
-            echo 'Маршрут не найден';
+            View::errorCode(500);
         }
     }
 

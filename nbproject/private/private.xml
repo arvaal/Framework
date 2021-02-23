@@ -13,10 +13,10 @@
             <file>file:/var/www/html/Framework/application/views/account/login.php</file>
             <file>file:/var/www/html/Framework/.htaccess</file>
             <file>file:/var/www/html/Framework/application/config/Routes.php</file>
-            <file>file:/var/www/html/Framework/application/controllers/NewsController.php</file>
             <file>file:/var/www/html/Framework/application/controllers/MainController.php</file>
             <file>file:/var/www/html/Framework/application/core/Router.php</file>
             <file>file:/var/www/html/Framework/application/controllers/AccountController.php</file>
+            <file>file:/var/www/html/Framework/application/views/layout/custom.php</file>
             <file>file:/var/www/html/Framework/application/core/Controller.php</file>
         </group>
     </open-files>
