@@ -13,21 +13,29 @@ class Db {
         $this->db = new PDO('mysql:host=' . $config['host'] . ';dbname=' . $config['name'] . ';charset=utf8', $config['user'], $config['password']);
     }
     
-    public function query($sql) {
-        $query = $this->db->query($sql);
+    public function query($sql, $params = []) {
+        
+        $stm = $this->db->prepare($sql);
+        
+        if (!empty($params)) {
+            foreach ($params as $key => $val) {
+                $stm->bindValue(':' . $key, $val);
+            }
+        }
 
-        return $query;
-                
+        $stm->execute();
+
+        return $stm;
     }
     
-    public function row($sql) {
-        $result = $this->query($sql);
+    public function row($sql, $params = []) {
+        $result = $this->query($sql, $params);
         
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
     
-    public function column($sql) {
-        $result = $this->query($sql);
+    public function column($sql, $params = []) {
+        $result = $this->query($sql, $params);
         
         return $result->fetchColumn();
     }

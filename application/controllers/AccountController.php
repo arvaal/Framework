@@ -12,7 +12,11 @@ class AccountController extends Controller {
 
     public function loginAction() {
         //$this->view->redirect('/Framework/');
-        $this->view->render('Страница логина');
+        if(!empty($_POST)) {
+            $this->view->massage('error', 'Ошибка');
+        }
+        
+        $this->view->render('логин');
     }
 
     public function registerAction() {

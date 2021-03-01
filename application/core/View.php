@@ -40,5 +40,13 @@ class View {
         header('location: ' . $url);
         exit;
     }
+    
+    public function massage($status, $massage) {
+        exit(json_encode(['status' => $status, 'nassage' => $massage]));
+    }
+    
+    public function location($url) {
+        exit(json_encode(['url' => $url]));
+    }
 
 }

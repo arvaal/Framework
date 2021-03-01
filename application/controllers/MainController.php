@@ -8,17 +8,15 @@ use application\lib\Db;
 class MainController extends Controller {
 
     public function indexAction() {
-        //$vars = [
-        //    'name' => 'Ваган',
-        //    'age' => 36
-        //];
-        //$this->view->render('Главная страница', $vars);
         
-        $db = new Db();
-        $data = $db->row('SELECT name FROM users');
-        debug($data);
+        $result = $this->model->getNews();
         
-        $this->view->render('Главная страница');
+        $vars = [
+            'h1' => 'Главная страница',
+            'news' => $result
+        ];
+        
+        $this->view->render('Главная страница', $vars);
     }
 
 }
